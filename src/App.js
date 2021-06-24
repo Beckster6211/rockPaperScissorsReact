@@ -8,24 +8,39 @@ function App() {
   let [computerChoice, setComputerChoice] = useState("❓");
   let [whatHappens, setWhatHappens] = useState("...");
   let [winner, setWinner] = useState("...");
-  // let [name, setName] = useState("You")
+  // let [name, setName] = useState("You");
 
   let comMove;
-  // let person;
+  let name;
+  let person;
   let choices = ["rock", "paper", "scissors"];
 
-  // function startGame() {
-  //   let start = alert("First to 5 wins");
+  // function StartGame() {
+  //   let start = alert("First to 5 wins (you can play past 5)");
   //   console.log(start);
   //   console.log("5 point win");
-  //   let message = alert("You can play past 5");
-  //   console.log(message);
-  //   console.log("Play past 5");
-  //   //   let person = prompt("Enter Name...");
-  //   //   console.log(person);
-  //   // setName(name = person)
+  //   person = prompt("Enter Name...");
+  //   console.log(person);
+  //   name = person;
   // }
-  // startGame();
+  // StartGame();
+  // let message = alert("You can play past 5");
+  // console.log(message);
+  // console.log("Play past 5");
+
+  // function SetName() {
+  //   console.log("New player button clicked");
+  //   let newPerson = prompt("Enter Name...");
+  //   console.log(newPerson);
+  //   name = newPerson;
+  // }
+
+  // SetName();
+  // let person = prompt("Enter Name...");
+  // console.log(person);
+  // // setName((name = person));
+  // let name = person;
+  // console.log(name);
 
   function GameWinner() {
     if (playerScore === 5) {
@@ -169,7 +184,9 @@ function App() {
       <div className="results">
         <div className="player">
           {/* can put the score next to the name  */}
-          <h3 id="name">You: {playerScore}</h3>
+          <h3 id="name">
+            {name || "You"}: {playerScore}
+          </h3>
           <p id="playerChoice">{playerChoice}</p>
           <p id="playerScore"></p>
         </div>
@@ -187,6 +204,7 @@ function App() {
         <button id="reset" onClick={() => ResetButton()}>
           Reset🏁
         </button>
+        {/* <button onClick={() => SetName()}>New Player</button> */}
       </div>
     </div>
   );
