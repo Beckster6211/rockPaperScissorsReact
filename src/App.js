@@ -29,37 +29,37 @@ function App() {
 
   function GameWinner() {
     if (playerScore === 5) {
-      console.log("winner is player");
+      // console.log("winner is player");
       setWinner((winner = "Player"));
     } else if (computerScore === 5) {
-      console.log("winner is computer");
+      // console.log("winner is computer");
       setWinner((winner = "Computer"));
     }
   }
 
   function PlayerPoint() {
     setPlayerScore((playerScore = playerScore + 1));
-    console.log("add point to player");
+    // console.log("add point to player");
     GameWinner();
   }
 
   function ComputerPoint() {
     setComputerScore((computerScore = computerScore + 1));
-    console.log("add point to computer");
+    // console.log("add point to computer");
     GameWinner();
   }
 
   function ResetButton() {
     setPlayerScore((playerScore = 0));
-    console.log("reset player score to 0");
+    // console.log("reset player score to 0");
     setPlayerChoice((playerChoice = "❓"));
     setComputerScore((computerScore = 0));
-    console.log("reset computer score to 0");
+    // console.log("reset computer score to 0");
     setComputerChoice((computerChoice = "❓"));
     setWhatHappens((whatHappens = "..."));
-    console.log("reset what happens");
+    // console.log("reset what happens");
     setWinner((winner = "..."));
-    console.log("reset winner info");
+    // console.log("reset winner info");
   }
 
   function ComputerMove() {
@@ -67,21 +67,21 @@ function App() {
     comMove = choices[randomIndex];
     if (comMove === choices[0]) {
       setComputerChoice((computerChoice = "🌑"));
-      console.log({ comMove });
+      // console.log({ comMove });
     } else if (comMove === choices[1]) {
       setComputerChoice((computerChoice = "📜"));
-      console.log({ comMove });
+      // console.log({ comMove });
     } else {
       setComputerChoice((computerChoice = "✂️"));
-      console.log({ comMove });
+      // console.log({ comMove });
     }
     return comMove;
   }
 
   function PickRock() {
-    console.log("Click rock button");
+    // console.log("Click rock button");
     let playerMove = choices[0];
-    console.log({ playerMove });
+    // console.log({ playerMove });
     setPlayerChoice((playerChoice = "🌑"));
     ComputerMove();
     if (comMove === choices[0]) {
@@ -102,9 +102,9 @@ function App() {
   }
 
   function PickPaper() {
-    console.log("Click paper button");
+    // console.log("Click paper button");
     let playerMove = choices[1];
-    console.log({ playerMove });
+    // console.log({ playerMove });
     setPlayerChoice((playerChoice = "📜"));
     ComputerMove();
     if (comMove === choices[0]) {
@@ -121,7 +121,7 @@ function App() {
   function PickScissors() {
     console.log("Click scissors button");
     let playerMove = choices[2];
-    console.log({ playerMove });
+    // console.log({ playerMove });
     setPlayerChoice((playerChoice = "✂️"));
     ComputerMove();
     if (comMove === choices[0]) {
