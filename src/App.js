@@ -15,15 +15,15 @@ function App() {
   let person;
   let choices = ["rock", "paper", "scissors"];
 
-  // function StartGame() {
-  //   let start = alert("First to 5 wins (you can play past 5)");
-  //   console.log(start);
-  //   console.log("5 point win");
-  //   person = prompt("Enter Name...");
-  //   console.log(person);
-  //   name = person;
-  // }
-  // StartGame();
+  function StartGame() {
+    let start = alert("First to 5 wins (you can play past 5)");
+    console.log(start);
+    console.log("5 point win");
+    person = prompt("Enter Name...");
+    console.log(person);
+    name = person;
+  }
+  StartGame();
   // let message = alert("You can play past 5");
   // console.log(message);
   // console.log("Play past 5");
