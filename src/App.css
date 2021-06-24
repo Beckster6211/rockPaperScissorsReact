@@ -1,38 +1,406 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-image: url("./rock-paper-scissor-ft.jpg");
+  background-repeat: repeat;
+  background-size: contain;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.buttons {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+#rockButton {
+  border: 3px solid;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  /* width: 15%; */
+}
+
+#paperButton {
+  border: 3px solid;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  /* width: 15%; */
+}
+
+#scissorsButton {
+  border: 3px solid;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  /* width: 15%; */
+}
+
+.results {
+  text-align: center;
+}
+
+.player {
+  border: 3px solid;
+  /* color: rgb(100, 66, 66); */
+  font-size: 2.5rem;
+  margin: 1%;
+}
+
+#playerScore {
+  font-weight: 900;
+}
+
+#playerChoice {
+  font-size: 3.2rem;
+}
+
+.computer {
+  border: 3px solid;
+  /* color: black; */
+  font-size: 2.5rem;
+  margin: 1%;
+}
+
+#computerScore {
+  font-weight: 900;
+}
+
+#computerChoice {
+  font-size: 3.2rem;
+}
+
+.reset {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+}
+
+#reset {
+  border: 3px solid;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+#whatHappens {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+#winner {
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media only screen and (min-device-width: 200px) {
+  .title {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  #rockButton {
+    border: 3px solid;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    /* width: 15%; */
+  }
+
+  #paperButton {
+    border: 3px solid;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    /* width: 15%; */
+  }
+
+  #scissorsButton {
+    border: 3px solid;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    /* width: 15%; */
+  }
+
+  .results {
+    text-align: center;
+  }
+
+  .player {
+    border: 3px solid;
+    font-size: 1.5rem;
+    margin: 1%;
+  }
+
+  #playerScore {
+    font-weight: 900;
+    text-decoration: underline;
+  }
+
+  #playerChoice {
+    font-size: 2rem;
+  }
+
+  .computer {
+    border: 3px solid;
+    font-size: 1.5rem;
+    margin: 1%;
+  }
+
+  #computerScore {
+    font-weight: 900;
+    text-decoration: underline;
+  }
+
+  #computerChoice {
+    font-size: 2rem;
+  }
+
+  #reset {
+    border: 3px solid;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  #whatHappens {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  #winner {
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-device-width: 500px) {
+  .title {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.3rem;
+  }
+
+  #rockButton {
+    border: 3px solid;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    font-size: 1.7rem;
+    font-weight: 700;
+    /* width: 15%; */
+  }
+
+  #paperButton {
+    border: 3px solid;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    font-size: 1.7rem;
+    font-weight: 700;
+    /* width: 15%; */
+  }
+
+  #scissorsButton {
+    border: 3px solid;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    font-size: 1.7rem;
+    font-weight: 700;
+    /* width: 15%; */
+  }
+
+  .results {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  /* .results {
+    text-align: center;
+  } */
+
+  .player {
+    border: 3px solid;
+    font-size: 1.5rem;
+    margin: 1%;
+  }
+
+  #playerScore {
+    font-weight: 900;
+    text-decoration: underline;
+  }
+
+  #playerChoice {
+    font-size: 2rem;
+  }
+
+  .computer {
+    border: 3px solid;
+    font-size: 1.5rem;
+    margin: 1%;
+  }
+
+  #computerScore {
+    font-weight: 900;
+    text-decoration: underline;
+  }
+
+  #computerChoice {
+    font-size: 2rem;
+  }
+
+  #reset {
+    border: 3px solid;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  #whatHappens {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  #winner {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .App {
+    text-align: center;
+    background-image: url("./rock-paper-scissor-ft.jpg");
+    /* background-repeat: repeat; */
+    background-size: cover;
+    color: white;
+  }
+  .title {
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.6rem;
+  }
+
+  #rockButton {
+    border: 3px solid;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    font-size: 1.9rem;
+    font-weight: 700;
+    /* width: 15%; */
+  }
+
+  #paperButton {
+    border: 3px solid;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    font-size: 1.9rem;
+    font-weight: 700;
+    /* width: 15%; */
+  }
+
+  #scissorsButton {
+    border: 3px solid;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    font-size: 1.9rem;
+    font-weight: 700;
+    /* width: 15%; */
+  }
+
+  .results {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  /* .results {
+    text-align: center;
+  } */
+
+  .player {
+    border: 3px solid;
+    font-size: 1.6rem;
+    margin: 1%;
+  }
+
+  #playerScore {
+    font-weight: 900;
+    text-decoration: underline;
+  }
+
+  #playerChoice {
+    font-size: 2.5rem;
+  }
+
+  .computer {
+    border: 3px solid;
+    font-size: 1.6rem;
+    margin: 1%;
+  }
+
+  #computerScore {
+    font-weight: 900;
+    text-decoration: underline;
+  }
+
+  #computerChoice {
+    font-size: 2.5rem;
+  }
+
+  #reset {
+    border: 3px solid;
+    border-radius: 10px;
+    color: black;
+    background-color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  #whatHappens {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  #winner {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
   }
 }
