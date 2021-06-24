@@ -140,6 +140,7 @@ function App() {
   return (
     <div className="App">
       <div className="title">
+        &nbsp;
         <h1>Rock Paper Scissors</h1>
       </div>
       <div className="buttons">
