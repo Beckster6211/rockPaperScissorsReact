@@ -155,7 +155,7 @@ function App() {
   return (
     <div className="App">
       <div className="title">
-        &nbsp;
+        <br />
         <h1>Rock Paper Scissors</h1>
       </div>
       <div className="buttons">
