@@ -71,7 +71,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 # rockPaperScissorsReact
 
-## School of Code Week 1 Day 5 Improved...
+## School of Code Week 1 Day 5 Improved Even More...
 
 ### What to do
 
@@ -92,8 +92,14 @@ Me and my partner manage to get the concept of the game working but only in the 
 
 I went back to the hackathon on occasion and atleast completed the main concept of it so the result are displayed on the screen (with the dom manipulation).
 
-### How I improved
+### How I improved the original
 
 I have changed this so that you can pick what the players options are with buttons for each one instead of having to type it into an input field. This improvement makes it more playable and easier to follow.
 
 I have also styled this version with better css, background image and media queries for use on different devices.
+
+### This Version
+
+This version I converted it onto React using some of the same logic but I did have to change the JS to JSX and use states in order for the game and code to function in a cleaner and better way.
+
+###### (This doesn't have the alert or prompt features so the player is called "You:")
