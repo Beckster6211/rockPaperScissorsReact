@@ -2,7 +2,7 @@
 
 # Rock Paper Scissors React
 
-<img src= "./public/logo192.png" width = "100px" height = "100px" alt = "React Logo"/>
+<img src = "./public/HTMLCSSJS.png" width = "250px" height = "150px"/><img src= "./public/logo192.png" width = "100px" height = "100px" alt = "React Logo"/>
 
 ## School of Code Week 1 Day 5 Improved Even More...
 
